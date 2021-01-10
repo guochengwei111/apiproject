@@ -12,7 +12,9 @@ urlpatterns = [
     # re_path(r"^articles/(?P<pk>[0-9]+)$", views.ArticleDetailAPIView.as_view())
     # APIView
     re_path(r"^articles/$", views.ArticleListGenericView.as_view()),
-    re_path(r"^articles/(?P<pk>[0-9]+)$", views.ArticleDetailGenericView.as_view())
+    re_path(r"^articles/(?P<pk>[0-9]+)$", views.ArticleDetailGenericView.as_view()),
+    # celery
+    re_path(r"^test/$", views.test),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns=urlpatterns)
