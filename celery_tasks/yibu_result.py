@@ -1,5 +1,5 @@
 from celery.result import AsyncResult
-from blog.yibu_celery import cel
+from celery_tasks.yibu_celery import cel
 
 async_result = AsyncResult(id="", app=cel)
 

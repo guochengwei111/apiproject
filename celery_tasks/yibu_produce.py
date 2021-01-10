@@ -1,6 +1,6 @@
 # 异步的生产者
 # 导入异步任务函数
-from blog.yibu_celery import send_email, send_mesg
+from celery_tasks.yibu_celery import send_email
 from datetime import datetime, timedelta
 
 result = send_email.delay("yuan")
